@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.*?>
+
+<Stage xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <scene>
+        <Scene>
+            <AnchorPane prefHeight="271.0" prefWidth="397.0">
+            <children>
+               <BorderPane layoutX="2.0" layoutY="1.0" prefHeight="268.0" prefWidth="393.0">
+                  <top>
+                     <BorderPane prefHeight="43.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+                        <top>
+                           <MenuBar BorderPane.alignment="CENTER">
+                             <menus>
+                               <Menu mnemonicParsing="false" text="Datoteka">
+                                 <items>
+                                       <MenuItem fx:id="open" mnemonicParsing="false" text="Odpri">
+                                          <accelerator>
+                                             <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                          </accelerator>
+                                       </MenuItem>
+                                       <MenuItem fx:id="clear" mnemonicParsing="false" text="Pobriši">
+                                          <accelerator>
+                                             <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                          </accelerator>
+                                       </MenuItem>
+                                   <MenuItem fx:id="exit" mnemonicParsing="false" text="Izhod">
+                                          <accelerator>
+                                             <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                          </accelerator></MenuItem>
+                                 </items>
+                               </Menu>
+                               <Menu mnemonicParsing="false" text="Izbire1">
+                                 <items>
+                                   <MenuItem mnemonicParsing="false" text="Delete" />
+                                 </items>
+                               </Menu>
+                               <Menu mnemonicParsing="false" text="Izbire2">
+                                 <items>
+                                   <MenuItem mnemonicParsing="false" text="About" />
+                                 </items>
+                               </Menu>
+                                 <Menu mnemonicParsing="false" text="Pomoč">
+                                   <items>
+                                     <MenuItem mnemonicParsing="false" text="Action 1" />
+                                   </items>
+                                 </Menu>
+                             </menus>
+                           </MenuBar>
+                        </top>
+                        <bottom>
+                           <ToolBar prefHeight="40.0" prefWidth="574.0" BorderPane.alignment="CENTER">
+                             <items>
+                               <Button mnemonicParsing="false" text="Button" />
+                             </items>
+                           </ToolBar>
+                        </bottom>
+                     </BorderPane>
+                  </top>
+                  <bottom>
+                     <Label fx:id="status" text="Status:" BorderPane.alignment="CENTER_LEFT" />
+                  </bottom>
+               </BorderPane>
+            </children></AnchorPane>
+        </Scene>
+    </scene>
+</Stage>
