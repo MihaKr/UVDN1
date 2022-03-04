@@ -1,8 +1,8 @@
-module com.example.uvdn1 {
+module com.uvdn1.uvdn1 {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.uvdn1 to javafx.fxml;
-    exports com.example.uvdn1;
+    opens com.uvdn1.uvdn1 to javafx.fxml;
+    exports com.uvdn1.uvdn1;
 }

@@ -5,7 +5,7 @@ plugins {
     id 'org.beryx.jlink' version '2.24.1'
 }
 
-group 'com.example'
+group 'com.uvdn1'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -16,20 +16,20 @@ ext {
     junitVersion = '5.8.1'
 }
 
-sourceCompatibility = '11'
-targetCompatibility = '11'
+sourceCompatibility = '15'
+targetCompatibility = '15'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
 application {
-    mainModule = 'com.example.uvdn1'
-    mainClass = 'com.example.uvdn1.HelloApplication'
+    mainModule = 'com.uvdn1.uvdn1'
+    mainClass = 'com.uvdn1.uvdn1.HelloApplication'
 }
 
 javafx {
-    version = '11.0.2'
+    version = '15.0.1'
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
