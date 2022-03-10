@@ -98,10 +98,10 @@
       <Label fx:id="status" text="Status:" BorderPane.alignment="CENTER_LEFT" />
    </bottom>
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane prefHeight="317.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="220.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="10.0" prefWidth="380.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -113,17 +113,17 @@
          <children>
             <TextField prefHeight="25.0" prefWidth="99.0" GridPane.columnIndex="1" />
             <Label text="Sestavljena beseda" />
-            <Label text="Domači kraj" GridPane.rowIndex="1" />
+            <Label text="Domači kraj:" GridPane.rowIndex="1" />
             <ComboBox prefWidth="150.0" promptText="Domači kraj ..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <RadioButton mnemonicParsing="false" text="Dodaj  " />
                   <RadioButton mnemonicParsing="false" text="Odstrani prvega  " />
                   <RadioButton mnemonicParsing="false" text="Odstrani zadnjega" />
                </children></HBox>
             <Spinner GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="Dejanje" GridPane.rowIndex="2" />
-            <Label text="Izbira mesta" GridPane.rowIndex="3" />
+            <Label text="Dejanje:" GridPane.rowIndex="2" />
+            <Label text="Izbira mesta:" GridPane.rowIndex="3" />
             <Label text="Sporočilo:" GridPane.rowIndex="4" />
             <CheckBox mnemonicParsing="false" text="Prepovej dvojnike" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
