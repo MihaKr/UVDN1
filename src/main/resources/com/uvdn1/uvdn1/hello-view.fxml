@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.Spinner?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.input.KeyCodeCombination?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uvdn1.uvdn1.HelloController">
     <top>
         <BorderPane BorderPane.alignment="CENTER">
             <top>
@@ -23,17 +12,17 @@
                     <menus>
                         <Menu mnemonicParsing="false" text="Datoteka">
                             <items>
-                                <MenuItem fx:id="open" mnemonicParsing="false" text="Odpri">
+                                <MenuItem fx:id="open" mnemonicParsing="false" onAction="#odpriCB" text="Odpri">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                     </accelerator>
                                 </MenuItem>
-                                <MenuItem fx:id="clean" mnemonicParsing="false" text="Počisti">
+                                <MenuItem fx:id="clean" mnemonicParsing="false" onAction="#clearCB" text="Počisti">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                     </accelerator>
                                 </MenuItem>
-                                <MenuItem mnemonicParsing="false" text="Zapri">
+                                <MenuItem mnemonicParsing="false" onAction="#izhodCB" text="Zapri">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                     </accelerator></MenuItem>
@@ -41,24 +30,24 @@
                         </Menu>
                         <Menu mnemonicParsing="false" text="Izbire1">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="M" />
-                                <MenuItem mnemonicParsing="false" text="I" />
-                                <MenuItem mnemonicParsing="false" text="H" />
-                                <MenuItem mnemonicParsing="false" text="A" />
+                                <MenuItem mnemonicParsing="false" onAction="#Mclick" text="M" />
+                                <MenuItem mnemonicParsing="false" onAction="#Iclick" text="I" />
+                                <MenuItem mnemonicParsing="false" onAction="#Hclick" text="H" />
+                                <MenuItem mnemonicParsing="false" onAction="#Aclick" text="A" />
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Izbire2">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="K" />
-                                <MenuItem mnemonicParsing="false" text="R" />
-                                <MenuItem mnemonicParsing="false" text="I" />
-                                <MenuItem mnemonicParsing="false" text="Š" />
-                                <MenuItem mnemonicParsing="false" text="T" />
-                                <MenuItem mnemonicParsing="false" text="O" />
-                                <MenuItem mnemonicParsing="false" text="F" />
-                                <MenuItem mnemonicParsing="false" text="E" />
-                                <MenuItem mnemonicParsing="false" text="L" />
-                                <MenuItem mnemonicParsing="false" text="C" />
+                                <MenuItem mnemonicParsing="false" onAction="#Kclick" text="K" />
+                                <MenuItem mnemonicParsing="false" onAction="#Rclick" text="R" />
+                                <MenuItem mnemonicParsing="false" onAction="#Iclick" text="I" />
+                                <MenuItem mnemonicParsing="false" onAction="#Šclick" text="Š" />
+                                <MenuItem mnemonicParsing="false" onAction="#Tclick" text="T" />
+                                <MenuItem mnemonicParsing="false" onAction="#Oclick" text="O" />
+                                <MenuItem mnemonicParsing="false" onAction="#Fclick" text="F" />
+                                <MenuItem mnemonicParsing="false" onAction="#Eclick" text="E" />
+                                <MenuItem mnemonicParsing="false" onAction="#Lclick" text="L" />
+                                <MenuItem mnemonicParsing="false" onAction="#Cclick" text="C" />
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Pomoč">
@@ -72,42 +61,45 @@
             <bottom>
                 <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <items>
-                        <Button mnemonicParsing="false" text="I1 M" />
-                        <Button mnemonicParsing="false" text="I2 I" />
-                        <Button mnemonicParsing="false" text="I3 H" />
-                        <Button mnemonicParsing="false" text="I4 A" />
-                        <Button mnemonicParsing="false" text="I2 K" />
-                        <Button mnemonicParsing="false" text="I2 R" />
-                        <Button mnemonicParsing="false" text="I2 I" />
-                        <Button mnemonicParsing="false" text="I2 Š" />
-                        <Button mnemonicParsing="false" text="I2 T" />
-                        <Button mnemonicParsing="false" text="I2 O" />
-                        <Button mnemonicParsing="false" text="I2F" />
-                        <Button mnemonicParsing="false" text="I2 E" />
-                        <Button mnemonicParsing="false" text="I2 L" />
-                        <Button mnemonicParsing="false" text="I2 C" />
+                        <Button fx:id="I1M" mnemonicParsing="false" onAction="#Mclick" text="I1 M" />
+                        <Button fx:id="I1I" mnemonicParsing="false" onAction="#Iclick" text="I1 I" />
+                        <Button fx:id="I1H" mnemonicParsing="false" onAction="#Hclick" text="I1 H" />
+                        <Button fx:id="I1A" mnemonicParsing="false" onAction="#Aclick" text="I1 A" />
+                        <Button fx:id="I2K" mnemonicParsing="false" onAction="#Kclick" text="I2 K" />
+                        <Button fx:id="I2R" mnemonicParsing="false" onAction="#Rclick" text="I2 R" />
+                        <Button fx:id="I2I" mnemonicParsing="false" onAction="#Iclick" text="I2 I" />
+                        <Button fx:id="I2Š" mnemonicParsing="false" onAction="#Šclick" text="I2 Š" />
+                        <Button fx:id="I2T" mnemonicParsing="false" onAction="#Tclick" text="I2 T" />
+                        <Button fx:id="I2O" mnemonicParsing="false" onAction="#Oclick" text="I2 O" />
+                        <Button fx:id="I2F" mnemonicParsing="false" onAction="#Fclick" text="I2 F" />
+                        <Button fx:id="I2E" mnemonicParsing="false" onAction="#Eclick" text="I2 E" />
+                        <Button fx:id="I2L" mnemonicParsing="false" onAction="#Lclick" text="I2 L" />
+                        <Button fx:id="I2C" mnemonicParsing="false" onAction="#Cclick" text="I2 C" />
                     </items>
                 </ToolBar>
             </bottom>
         </BorderPane>
     </top>
     <bottom>
-        <Label fx:id="status" text="Status:" BorderPane.alignment="CENTER_LEFT" />
+        <Label fx:id="status" text="status:" BorderPane.alignment="CENTER_LEFT" />
     </bottom>
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <Button layoutX="253.0" layoutY="261.0" mnemonicParsing="false" text="Izvedi izbrano akcijo" />
-                <RadioButton layoutX="93.0" layoutY="64.0" mnemonicParsing="false" text="Dodaj" />
-                <RadioButton layoutX="93.0" layoutY="90.0" mnemonicParsing="false" text="Odstrani prvega" />
-                <RadioButton layoutX="93.0" layoutY="115.0" mnemonicParsing="false" text="Odstrani izbranega" />
-                <CheckBox layoutX="270.0" layoutY="21.0" mnemonicParsing="false" text="Prepovej dvojnike" />
-                <Label layoutX="383.0" layoutY="191.0" text="Sporočilo:" />
-                <TextField layoutX="93.0" layoutY="17.0" />
+                <Button fx:id="izvedi" layoutX="253.0" layoutY="261.0" mnemonicParsing="false" onAction="#izvedi" text="Izvedi izbrano akcijo" />
+                <RadioButton fx:id="dodaj" layoutX="93.0" layoutY="64.0" mnemonicParsing="false" text="Dodaj">
+               <toggleGroup>
+                  <ToggleGroup fx:id="operacije" />
+               </toggleGroup></RadioButton>
+                <RadioButton fx:id="OdstraniPrvega" layoutX="93.0" layoutY="90.0" mnemonicParsing="false" text="Odstrani prvega" toggleGroup="$operacije" />
+                <RadioButton fx:id="odstraniIzbranega" layoutX="93.0" layoutY="115.0" mnemonicParsing="false" text="Odstrani izbranega" toggleGroup="$operacije" />
+                <CheckBox fx:id="dvojniki" layoutX="270.0" layoutY="21.0" mnemonicParsing="false" text="Prepovej dvojnike" />
+                <Label fx:id="sporocilo" layoutX="383.0" layoutY="191.0" text="Sporočilo:" />
+                <TextField fx:id="besedilo" layoutX="93.0" layoutY="17.0" />
                 <Label layoutX="30.0" layoutY="21.0" text="Besedilo:" />
                 <Label layoutX="30.0" layoutY="64.0" text="Operacije:" />
-                <Spinner layoutX="204.0" layoutY="186.0" />
-                <ComboBox layoutX="37.0" layoutY="186.0" prefWidth="150.0" promptText="izberi mesto..." />
+                <Spinner fx:id="spinner" layoutX="204.0" layoutY="186.0" />
+                <ComboBox fx:id="mesto" layoutX="37.0" layoutY="186.0" prefWidth="150.0" promptText="izberi mesto..." />
             </children></AnchorPane>
     </center>
 </BorderPane>
