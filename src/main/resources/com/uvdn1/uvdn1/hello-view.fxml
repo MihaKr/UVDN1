@@ -98,7 +98,7 @@
       <Label fx:id="status" text="Status:" BorderPane.alignment="CENTER_LEFT" />
    </bottom>
    <center>
-      <GridPane prefHeight="317.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <GridPane prefHeight="317.0" prefWidth="497.0" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="220.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="10.0" prefWidth="380.0" />
@@ -107,6 +107,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
@@ -126,6 +127,7 @@
             <Label text="Izbira mesta:" GridPane.rowIndex="3" />
             <Label text="Sporočilo:" GridPane.rowIndex="4" />
             <CheckBox mnemonicParsing="false" text="Prepovej dvojnike" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" text="Izvedi izbrano akcijo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </center>
