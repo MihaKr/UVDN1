@@ -3,6 +3,7 @@ package com.uvdn1.uvdn1;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -12,6 +13,7 @@ import java.util.ResourceBundle;
 public class HelloController implements Initializable {
     public Label status;
     public Label sporocilo;
+    public Label mousePos;
     public ComboBox mesto;
     public Spinner spinner;
     public TextField besedilo;
@@ -116,15 +118,17 @@ public class HelloController implements Initializable {
         mesto.getItems().addAll("Slovenj Gradec", "Ljubljana", "Celje", "Maribor", "Koper");
         spinner.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(1, 20, 1, 1));
 
-        String mesta = new String(String.valueOf(mesto.getItems()));
-        mesta = mesta.substring(1, mesta.length() - 1);
-        String [] arr = mesta.split(", ");
 
         spinner.valueProperty().addListener((obs, oldValue, newValue) -> {
             double spn = (double) spinner.getValue();
             int spnI = (int) (spn - 1);
 
             if (!"".equals(newValue)) {
+
+                String mesta = new String(String.valueOf(mesto.getItems()));
+                mesta = mesta.substring(1, mesta.length() - 1);
+                String [] arr = mesta.split(", ");
+
                 if(spnI < arr.length) {
                     sporocilo.setText("Sporočilo: " + arr[spnI]);
                 }
@@ -199,5 +203,9 @@ public class HelloController implements Initializable {
                 break;
             }
         sporocilo.setText("Sporočilo: " + ops);
+    }
+
+    public void move(MouseEvent mouseEvent) {
+        mousePos.setText("Položaj: X:" + mouseEvent.getSceneX() + " " + "Y:" + mouseEvent.getSceneY());
     }
 }
