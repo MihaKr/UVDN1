@@ -15,7 +15,7 @@ public class HelloController implements Initializable {
     public ComboBox mesto;
     public Spinner spinner;
     public TextField besedilo;
-    public RadioButton operacija;
+    public ToggleGroup operacije;
     public CheckBox dvojniki;
 
     private String vmes;
@@ -118,15 +118,49 @@ public class HelloController implements Initializable {
     }
 
     public void izvedi(ActionEvent actionEvent) {
-        if(besedilo.getText().equals("")) {
-            return;
-        }
-        else {
-            if(dvojniki.isSelected()) {
-                System.out.println(mesto.getValue());
-            }
+        RadioButton selectedRadioButton = (RadioButton) operacije.getSelectedToggle();
+        String ops = selectedRadioButton.getText();
 
-            mesto.getItems().addAll(besedilo.getText());
-        }
+        double spin = (double) spinner.getValue();
+        int spinI = (int) spin - 1;
+        System.out.println(spinI);
+
+        String mesta = new String(String.valueOf(mesto.getItems()));
+        mesta = mesta.substring(1, mesta.length() - 1);
+        String [] arr = mesta.split(", ");
+
+        switch (ops) {
+            case "Dodaj":
+                if (besedilo.getText().equals("")) {
+                    return;
+                } else {
+                    if (dvojniki.isSelected()) {
+                        System.out.println(mesto.getValue());
+                    }
+
+                    mesto.getItems().addAll(besedilo.getText());
+                }
+                break;
+            case "Odstrani prvega":
+                String [] arr2 = new String[arr.length-1];
+
+                for (int i = 0; i < arr.length; i++) {
+                    if(i != arr.length-1) {
+                        arr2[i] = arr[i + 1];
+                    }
+                }
+
+                arr = arr2;
+
+                mesto.getItems().clear();
+                mesto.getItems().addAll(arr);
+
+                break;
+            case "odstrani izbranega":
+
+
+                break;
+            }
+        sporocilo.setText("Sporočilo: " + ops);
     }
 }
