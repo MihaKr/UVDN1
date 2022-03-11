@@ -115,15 +115,31 @@ public class HelloController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         mesto.getItems().addAll("Slovenj Gradec", "Ljubljana", "Celje", "Maribor", "Koper");
         spinner.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(1, 20, 1, 1));
+
+        String mesta = new String(String.valueOf(mesto.getItems()));
+        mesta = mesta.substring(1, mesta.length() - 1);
+        String [] arr = mesta.split(", ");
+
+        spinner.valueProperty().addListener((obs, oldValue, newValue) -> {
+            double spn = (double) spinner.getValue();
+            int spnI = (int) (spn - 1);
+
+            if (!"".equals(newValue)) {
+                if(spnI < arr.length) {
+                    sporocilo.setText("Sporočilo: " + arr[spnI]);
+                }
+                else {
+                    sporocilo.setText("Sporočilo: Ni elementa");
+
+                }
+
+            }
+        });
     }
 
     public void izvedi(ActionEvent actionEvent) {
         RadioButton selectedRadioButton = (RadioButton) operacije.getSelectedToggle();
         String ops = selectedRadioButton.getText();
-
-        double spin = (double) spinner.getValue();
-        int spinI = (int) spin - 1;
-        System.out.println(spinI);
 
         String mesta = new String(String.valueOf(mesto.getItems()));
         mesta = mesta.substring(1, mesta.length() - 1);
@@ -135,7 +151,11 @@ public class HelloController implements Initializable {
                     return;
                 } else {
                     if (dvojniki.isSelected()) {
-                        System.out.println(mesto.getValue());
+                        for (int i = 0; i < arr.length; i++) {
+                            if(arr[i].equals(besedilo.getText())) {
+                                return;
+                            }
+                        }
                     }
 
                     mesto.getItems().addAll(besedilo.getText());
@@ -156,8 +176,25 @@ public class HelloController implements Initializable {
                 mesto.getItems().addAll(arr);
 
                 break;
-            case "odstrani izbranega":
+            case "Odstrani izbranega":
+                int ind = mesto.getSelectionModel().getSelectedIndex();
 
+                arr2 = new String[arr.length-1];
+
+                for (int i = 0; i < ind; i++) {
+                    arr2[i] = arr[i];
+                }
+
+                for (int i = ind; i < arr.length; i++) {
+                    if(i != arr.length-1) {
+                        arr2[i] = arr[i + 1];
+                    }
+                }
+
+                arr = arr2;
+
+                mesto.getItems().clear();
+                mesto.getItems().addAll(arr);
 
                 break;
             }
