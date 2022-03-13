@@ -22,47 +22,47 @@
             <top>
                 <MenuBar BorderPane.alignment="CENTER">
                     <menus>
-                        <Menu mnemonicParsing="false" text="Datoteka">
+                        <Menu text="_Datoteka">
                             <items>
-                                <MenuItem fx:id="open" mnemonicParsing="false" onAction="#odpriCB" text="Odpri">
+                                <MenuItem fx:id="open" onAction="#odpriCB" text="_Odpri">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                     </accelerator>
                                 </MenuItem>
-                                <MenuItem fx:id="clean" mnemonicParsing="false" onAction="#clearCB" text="Počisti">
+                                <MenuItem fx:id="clean" onAction="#clearCB" text="_Počisti">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                     </accelerator>
                                 </MenuItem>
-                                <MenuItem mnemonicParsing="false" onAction="#izhodCB" text="Zapri">
+                                <MenuItem onAction="#izhodCB" text="_Zapri">
                                     <accelerator>
                                         <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                     </accelerator></MenuItem>
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Izbire1">
+                        <Menu text="Izbire_1">
                             <items>
-                                <MenuItem mnemonicParsing="false" onAction="#Mclick" text="M" />
-                                <MenuItem mnemonicParsing="false" onAction="#Iclick" text="I" />
-                                <MenuItem mnemonicParsing="false" onAction="#Hclick" text="H" />
-                                <MenuItem mnemonicParsing="false" onAction="#Aclick" text="A" />
+                                <MenuItem onAction="#Mclick" text="_M" />
+                                <MenuItem onAction="#Iclick" text="_I" />
+                                <MenuItem onAction="#Hclick" text="_H" />
+                                <MenuItem onAction="#Aclick" text="_A" />
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Izbire2">
+                        <Menu text="Izbire_2">
                             <items>
-                                <MenuItem mnemonicParsing="false" onAction="#Kclick" text="K" />
-                                <MenuItem mnemonicParsing="false" onAction="#Rclick" text="R" />
-                                <MenuItem mnemonicParsing="false" onAction="#Iclick" text="I" />
-                                <MenuItem mnemonicParsing="false" onAction="#Šclick" text="Š" />
-                                <MenuItem mnemonicParsing="false" onAction="#Tclick" text="T" />
-                                <MenuItem mnemonicParsing="false" onAction="#Oclick" text="O" />
-                                <MenuItem mnemonicParsing="false" onAction="#Fclick" text="F" />
-                                <MenuItem mnemonicParsing="false" onAction="#Eclick" text="E" />
-                                <MenuItem mnemonicParsing="false" onAction="#Lclick" text="L" />
-                                <MenuItem mnemonicParsing="false" onAction="#Cclick" text="C" />
+                                <MenuItem onAction="#Kclick" text="_K" />
+                                <MenuItem onAction="#Rclick" text="_R" />
+                                <MenuItem onAction="#Iclick" text="_I" />
+                                <MenuItem onAction="#Šclick" text="_Š" />
+                                <MenuItem onAction="#Tclick" text="_T" />
+                                <MenuItem onAction="#Oclick" text="_O" />
+                                <MenuItem onAction="#Fclick" text="_F" />
+                                <MenuItem onAction="#Eclick" text="_E" />
+                                <MenuItem onAction="#Lclick" text="_L" />
+                                <MenuItem onAction="#Cclick" text="_C" />
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Pomoč">
+                        <Menu text="_Pomoč">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="Action 1" />
                             </items>
