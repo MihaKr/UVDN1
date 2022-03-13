@@ -114,7 +114,7 @@ public class HelloController implements Initializable {
         status.setText(vmes);
     }
 
-    public void initialize(URL location, ResourceBundle resources) {
+    public  void initialize(URL location, ResourceBundle resources) {
         mesto.getItems().addAll("Slovenj Gradec", "Ljubljana", "Celje", "Maribor", "Koper");
         spinner.setValueFactory(new SpinnerValueFactory.DoubleSpinnerValueFactory(1, 20, 1, 1));
 
